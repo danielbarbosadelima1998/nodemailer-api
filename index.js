@@ -5,20 +5,22 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 app.use(bodyParser.json());
 
-var whitelist = ["http://localhost:3000", "http://localhost:3002", undefined];
+//https://nodemailer-front-daniel.herokuapp.com/
 
-var corsOptions = {
-  origin: function (origin, callback) {
-      console.log("quem esta tentando acessar: ",origin)
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
+// var whitelist = ["http://localhost:3000", "http://localhost:3002", undefined];
 
-app.use(cors(corsOptions));
+// var corsOptions = {
+//   origin: function (origin, callback) {
+//       console.log("quem esta tentando acessar: ",origin)
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+// };
+
+app.use(cors());
 
 app.post("/send-email", async (req, res) => {
   // validations

@@ -23,8 +23,8 @@ const initTransporter = () =>
     port: 587,
     secure: false,
     auth: {
-      user: "danielbarbosadelima1998@gmail.com",
-      pass: "sycecnbmdfnnpjou",
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
   });
 
