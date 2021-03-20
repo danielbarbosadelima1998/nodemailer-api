@@ -5,7 +5,7 @@
   "author": "Daniel Barbosa de Lima <daniel.lima@ikatec.com.br>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
